@@ -77,9 +77,9 @@ public class Employee {
 
         result += " Vergi: "+tax()+ " TL Bonus: "+ bonus() + " TL Maas artisi: "+ raiseSalary(hireYear) + " TL";
 
-        result += " Vergi ve bonuslarla birlikte maas: "+ (salary+ tax()+bonus()) + " TL";
+        result += " Vergi ve bonuslarla birlikte maas: "+ (salary - tax()+bonus()) + " TL";
 
-        result += " Toplam maas: " + (salary+ tax()+raiseSalary(hireYear) + bonus()) + " TL";
+        result += " Toplam maas: " + (salary+raiseSalary(hireYear) -tax() + bonus()) + " TL";
 
         return result;
     }
